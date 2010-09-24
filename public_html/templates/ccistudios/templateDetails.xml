@@ -27,8 +27,13 @@
     </files>
 
     <positions>
-    	<position>header</position>
+    	<position>top</position>
     	<position>menu</position>
+    	<position>header</position>
+    	
+    	<position>precontent</position>
+    	<position>sidebar</position>
+    	<position>postcontent</position>
     </positions>
 
     <params>
