@@ -19,8 +19,9 @@ $testing = "true";
 
 
 <?php if ($testing): ?>
+	<link rel="stylesheet" type="text/css" href="/templates/<?php echo $this->template ?>/css/joomla.css" />
 	<link rel="stylesheet" type="text/css" href="/templates/<?php echo $this->template ?>/css/960/reset.css" />
-	<link rel="stylesheet" type="text/css" href="/templates/<?php echo $this->template ?>/css/960/960.css" />
+	<!--<link rel="stylesheet" type="text/css" href="/templates/<?php echo $this->template ?>/css/960/960.css" />-->
 	<link rel="stylesheet" type="text/css" href="/templates/<?php echo $this->template ?>/css/960/text.css" />
 	<link rel="stylesheet" type="text/css" href="/templates/<?php echo $this->template ?>/css/forms.css" />
 	<link rel="stylesheet" type="text/css" href="/templates/<?php echo $this->template ?>/css/layout.css" />
@@ -48,38 +49,67 @@ $testing = "true";
   })();
 </script>
 <?php endif; ?>
-
-	<div class="container_16">
-			<div class="grid_16">
-				<jdoc:include type="modules" name="header" style="xhtml" />
-			</div>
-			
-			<div class="grid_16">
-				<jdoc:include type="modules" name="menu" style="xhtml" />
-			</div>
-			
-			<div class="container_16">
-				<div class="grid_3 alpha">
-					sidebar
-				</div>
-				<div class="grid_10">
-					content
-				</div>
-				<div class="grid_3 omega">
-					sidebar
-				</div>
-			</div>
-			
-			<div class="container_16">
-				<div class="grid_8 alpha">
-					<p>Site by <a href="" target="">CCI Studios</a></p>
-				</div>
-				<div class="grid_8 omega">
-					<p>Copyright &copy; <?php echo date('Y'); ?> by COMPANY NAME</p>
-				</div>
-			</div>
-	</div>
+<div id="outer">
+	<div id="top"><div>
+		top
+		<jdoc:include type="modules" name="top" style="xhtml" />
+		<div class="clr"></div>
+	</div></div>
 	
-	<div class="hidden"><jdoc:include type="modules" name="hidden" style="raw" /></div>
+	<div id="menu"><div>
+		<jdoc:include type="modules" name="menu" style="xhtml" />
+		<div class="clr"></div>
+	</div></div>
+	
+	
+	<div id="wrapper"><div>
+		<div id="header"><div>
+			header
+			<jdoc:include type="modules" name="header" style="xhtml" />
+			<div class="clr"></div>
+		</div></div>
+		
+		<div id="title"><div>
+			<h1 class="heading"><span>
+				<?php echo JFactory::getApplication()->getPageTitle(); ?>
+			</h1></span>
+		</div></div>
+		
+		<div id="body">
+			body
+			<div id="precontent">
+				precontent
+				<jdoc:include type="modules" name="precontent" style="xhtml" />
+				<div class="clr"></div>
+			</div>
+			
+			<div id="content">
+				content
+				<jdoc:include type="component" />
+				<div class="clr"></div>
+			</div>
+			
+			<div id="postcontent">
+				postcontent
+				<jdoc:include type="modules" name="postcontent" style="xhtml" />
+				<div class="clr"></div>
+			</div>
+		</div>
+		
+		<div id="sidebar">
+			sidebar
+			<jdoc:include type="modules" name="sidebar" style="xhtml" />
+			<div class="clr"></div>
+		</div>
+	</div></div>
+	
+	<div id="footer_spacer"></div>
+	<div id="footer"><div>
+		<p class="left">Site by <a href="" target="">CCI Studios</a></p>
+		<p class="right">Copyright &copy; <?=date('Y');?> Mindbridge Strategies</p>
+	</div></div>
+</div>
+	
+<div class="hidden"><jdoc:include type="modules" name="hidden" style="raw" /></div>
 </body>
 </html>

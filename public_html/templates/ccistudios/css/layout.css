@@ -1,0 +1,48 @@
+#top > div, #menu > div,
+#wrapper > div, #footer > div {
+	width:  952px;
+	margin: 0 auto;
+}
+
+html,body {
+	height: 100%;
+}
+
+#outer {
+	min-height: 100%;
+	_height: 100%; /* ie6- */
+	position: relative;
+}
+
+#top {
+	height: 94px;
+	padding: 1px 0;
+	
+	background:  url(../images/top_bg.png) repeat-x;
+}
+
+#menu {
+	height: 50px;
+	padding: 6px 0;
+	
+	background:  url(../images/menu_bg.png) repeat-x;
+}
+
+#wrapper {
+	padding: 15px 0;
+	background: url(../images/wrapper_bg.png) repeat-x;
+}
+
+
+#footer_spacer { height: 78px; }
+#footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+
+	height: 76px;
+	width: 100%;
+	padding: 1px 0;
+	
+	background: url(../images/footer_bg.png) repeat-x;
+}

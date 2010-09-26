@@ -1,0 +1,18 @@
+.heading {
+	display: block;
+
+	background: url(../images/heading.png) no-repeat left top;
+	padding: 0 0 0 10px;
+	
+	font-size: 14px;
+	font-weight: normal;
+	color: #274067;
+	line-height: 42px;
+}
+.heading span {
+	display: block;
+	height: 42px;
+	
+	background: url(../images/heading.png) no-repeat right bottom;
+	padding: 0 10px 0 0;
+}
