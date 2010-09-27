@@ -39,7 +39,7 @@ $testing = "true";
 <?php if (!$testing): ?>
 <script type="text/javascript">
   var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
+  _gaq.push(['_setAccount', 'UA-18755614-1']);
   _gaq.push(['_trackPageview']);
 
   (function() {
@@ -51,7 +51,6 @@ $testing = "true";
 <?php endif; ?>
 <div id="outer">
 	<div id="top"><div>
-		top
 		<jdoc:include type="modules" name="top" style="xhtml" />
 		<div class="clr"></div>
 	</div></div>
@@ -64,7 +63,6 @@ $testing = "true";
 	
 	<div id="wrapper"><div>
 		<div id="header"><div>
-			header
 			<jdoc:include type="modules" name="header" style="xhtml" />
 			<div class="clr"></div>
 		</div></div>
@@ -75,32 +73,37 @@ $testing = "true";
 			</h1></span>
 		</div></div>
 		
-		<div id="body">
-			body
+		<div id="body" <?php if (!$this->countModules('sidebar')) { echo 'class="wide"'; } ?>>
+			<?php if ($this->countModules('precontent')): ?>
 			<div id="precontent">
-				precontent
 				<jdoc:include type="modules" name="precontent" style="xhtml" />
 				<div class="clr"></div>
 			</div>
+			<?php endif; ?>
 			
 			<div id="content">
-				content
 				<jdoc:include type="component" />
 				<div class="clr"></div>
 			</div>
 			
+			<?php if ($this->countModules('postcontent')): ?>
 			<div id="postcontent">
-				postcontent
 				<jdoc:include type="modules" name="postcontent" style="xhtml" />
 				<div class="clr"></div>
 			</div>
+			<?php endif; ?>
+			
+			<div class="clr"></div>
 		</div>
 		
+		<?php if ($this->countModules('sidebar')): ?>
 		<div id="sidebar">
-			sidebar
 			<jdoc:include type="modules" name="sidebar" style="xhtml" />
 			<div class="clr"></div>
 		</div>
+		<?php endif; ?>
+		
+		<div class="clr"></div>
 	</div></div>
 	
 	<div id="footer_spacer"></div>
