@@ -33,6 +33,17 @@ html,body {
 	background: url(../images/wrapper_bg.png) repeat-x;
 }
 
+#body {
+	float: left;
+	width: 652px;
+	margin-right: 20px;
+}
+
+#sidebar {
+	width: 280px;
+	float: left;
+}
+
 
 #footer_spacer { height: 78px; }
 #footer {

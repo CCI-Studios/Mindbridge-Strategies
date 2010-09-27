@@ -48,3 +48,18 @@
 
 /* @end */
 /* @end */
+
+/* @group post/pre content modules */
+#postcontent > .moduletable,
+#precontent > .moduletable {
+	width: 316px;
+}
+#postcontent > .moduletable.left,
+#precontent > .moduletable.left {
+	margin-right: 10px;
+}
+#postcontent > .moduletable.right,
+#precontent > .moduletable.right {
+	margin-left: 10px;
+}
+/* @end */
