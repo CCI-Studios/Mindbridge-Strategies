@@ -34,3 +34,22 @@
 .slide_info li {
 	margin-left: 15px;
 }
+
+.slideshow .link-container {
+	z-index: 5;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+}
+
+.slideshow .link {
+	float: left;
+	margin: 0 7px 0 0;
+	cursor: pointer;
+	
+	width: 7px;
+	height: 7px;
+	background: url(../images/grey_dot.png) no-repeat;
+}
+
+.slideshow .link.active { background: url(../images/white_dot.png) no-repeat; }

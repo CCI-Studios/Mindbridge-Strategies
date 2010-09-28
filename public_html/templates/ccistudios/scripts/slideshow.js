@@ -2,6 +2,7 @@ var Slideshow = new Class({
 	slides: null,
 	active: null,
 	base: null,
+	links: null,
 	
 	timer: null,
 	effects: null,
@@ -9,14 +10,18 @@ var Slideshow = new Class({
 	delay: 3000,
 
 	initialize: function (el) {
-		var toggle, i;
+		var toggle, i, links, link;
 		if (!el || el === undefined) {
 			return;
 		}
 		
-		this.base = parseInt(0 + el.getStyle('z-index'), 10) + 1;
-		this.slides = el.getElements('.item');
-		this.effects = [];
+		this.base 		= parseInt(0 + el.getStyle('z-index'), 10) + 1;
+		this.slides 	= el.getElements('.item');
+		this.effects 	= [];
+		this.links 		= [];
+		links			= new Element('div', { 'class': 'link-container' });
+		links.injectInside(el);
+		
 		
 		for (i = 0; i < this.slides.length; i += 1) {
 			toggle = new Fx.Styles(this.slides[i], {
@@ -37,8 +42,22 @@ var Slideshow = new Class({
 					opacity:	0
 				});
 			} else {
-				this.slides[i].setStyles('opacity', 0);
+				this.slides[i].setStyles({
+					'opacity': 0,
+					'z-index': this.base - 1
+				});
 			}
+			
+			if (i === 0) {
+				link = new Element('div', { 'class': 'link active' });
+			} else {
+				link = new Element('div', { 'class': 'link' });
+			}
+			link.addEvent('click', function (i) {
+				this.select(i);
+			}.bind(this, i));
+			link.injectInside(links);
+			this.links.push(link);
 		}
 		
 		this.active = 0;
@@ -46,6 +65,7 @@ var Slideshow = new Class({
 	},
 
 	next: function () {
+		this.links[this.active].removeClass('active');
 		this.effects[this.active].start({
 			opacity: 0
 		});
@@ -55,11 +75,38 @@ var Slideshow = new Class({
 			this.active = 0;
 		}
 			
+		this.links[this.active].addClass('active');
 		this.effects[this.active].start({
 			opacity: 1
 		});
 		
-		this.next.delay(this.delay + this.duration, this);
+		$clear(this.timer);
+		this.timer = this.next.delay(this.delay + this.duration, this);
+	},
+	
+	select: function (active) {
+		if (this.active === active)
+			return;
+	
+		$clear(this.timer);
+		this.links[this.active].removeClass('active');
+		this.effects[this.active].stop();
+		this.effects[this.active].start({
+			opacity: 0
+		});
+		
+		this.active = active;
+		
+		this.links[this.active].addClass('active');
+		this.slides[this.active].setStyle('z-index', this.base+1);
+		this.effects[this.active].stop();
+		this.effects[this.active].start({
+			opacity: 1
+		});
+		
+		$clear(this.timer);
+		this.timer = this.next.delay(this.delay + this.duration, this);
+		
 	},
 	
 	complete: function () {
@@ -76,7 +123,8 @@ var Slideshow = new Class({
 	},
 	
 	start: function () {
-		this.next.delay(this.delay, this);
+		$clear(this.timer);
+		this.timer = this.next.delay(this.delay, this);
 	}
 });
 
