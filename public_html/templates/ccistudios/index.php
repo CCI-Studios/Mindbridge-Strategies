@@ -5,7 +5,7 @@ if ($menu)
     $menu = $menu->getActive();
 if ($menu)
     $menu = $menu->alias;
-$testing = "true";
+$testing = true;
 
 ?>
 <html>
@@ -19,21 +19,11 @@ $testing = "true";
 
 
 <?php if ($testing): ?>
-	<link rel="stylesheet" type="text/css" href="/templates/<?php echo $this->template ?>/css/joomla.css" />
-	<link rel="stylesheet" type="text/css" href="/templates/<?php echo $this->template ?>/css/960/reset.css" />
-	<!--<link rel="stylesheet" type="text/css" href="/templates/<?php echo $this->template ?>/css/960/960.css" />-->
-	<link rel="stylesheet" type="text/css" href="/templates/<?php echo $this->template ?>/css/960/text.css" />
-	<link rel="stylesheet" type="text/css" href="/templates/<?php echo $this->template ?>/css/fonts.css" />
-	<link rel="stylesheet" type="text/css" href="/templates/<?php echo $this->template ?>/css/forms.css" />
-	<link rel="stylesheet" type="text/css" href="/templates/<?php echo $this->template ?>/css/layout.css" />
-	<link rel="stylesheet" type="text/css" href="/templates/<?php echo $this->template ?>/css/modules.css" />
-	<link rel="stylesheet" type="text/css" href="/templates/<?php echo $this->template ?>/css/style.css" />
-	<link rel="stylesheet" type="text/css" href="/templates/<?php echo $this->template ?>/css/editorStyles.css" />
-	<link rel="stylesheet" type="text/css" href="/templates/<?php echo $this->template ?>/css/slideshow.css" />
-	
+	<link rel="stylesheet" type="text/css" href="/templates/<?php echo $this->template ?>/css/template.css" />
 	<script type="text/javascript" src="/templates/<?php echo $this->template ?>/scripts/dropmenu.js"></script>
 <?php else: ?>
-	<link rel="stylesheet" type="text/css" href="/templates/<?php echo $this->template ?>/css/template.css" />
+	<link rel="stylesheet" type="text/css" href="/templates/<?php echo $this->template ?>/css/template.min.css" />
+	<script type="text/javascript" src="/templates/<?php echo $this->template ?>/scripts/app.min.js"></script>
 <?php endif; ?>
 </head>
 

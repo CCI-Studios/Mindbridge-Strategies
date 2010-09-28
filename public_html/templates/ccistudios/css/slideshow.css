@@ -1,0 +1,36 @@
+.slideshow {
+	position: relative;
+	height: 250px;
+	width: 649px;
+}
+
+.slideshow  .item {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.slideshow .description {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	
+	color: white;
+	line-height: 55px;
+	padding: 0 10px;
+}
+
+.slide_info {
+	background: url(../images/slideshow.png) no-repeat;
+	width: 230px;
+	height: 205px;
+	padding: 22px 25px;
+	margin-left: 23px;
+}
+.slide_info h3 {
+	line-height: 1.1em;
+	border: none;
+}
+.slide_info li {
+	margin-left: 15px;
+}
