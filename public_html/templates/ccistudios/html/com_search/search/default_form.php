@@ -24,10 +24,10 @@ defined('_JEXEC') or die('Restricted access'); ?>
 		<?php echo $this->lists['searchphrase']; ?>
 	</div>-->
 	
-	<div>
+	<!--<div>
 		<label for="ordering"><?php echo JText::_( 'Ordering' );?>:</label><br/>
 		<?php echo $this->lists['ordering'];?>
-	</div>
+	</div>-->
 	
 	<?php if ($this->params->get( 'search_areas', 1 )) : ?>
 	<div>
@@ -48,12 +48,12 @@ defined('_JEXEC') or die('Restricted access'); ?>
 <p>
 	<?php echo $this->result; ?>
 </p>
-<p>
+<!--<p>
 	<label for="limit">
 		<?php echo JText::_( 'Display Num' ); ?>
 	</label>
 	<?php echo $this->pagination->getLimitBox( ); ?>
-</p>
+</p>-->
 <?php endif; ?>
 
 <input type="hidden" name="task"   value="search" />
