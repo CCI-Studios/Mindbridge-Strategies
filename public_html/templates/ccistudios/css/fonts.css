@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'TW_cen';
+  src: url('../fonts/Tw_Cen_MT.eot');
+  src: local('☺'),
+         url('../fonts/Tw_Cen_MT.ttf') format('truetype');
+}
