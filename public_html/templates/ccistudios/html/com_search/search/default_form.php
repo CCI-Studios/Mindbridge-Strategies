@@ -12,24 +12,20 @@ defined('_JEXEC') or die('Restricted access'); ?>
 
 <form id="searchForm" action="<?php echo JRoute::_( 'index.php?option=com_search' );?>" method="post" name="searchForm">
 <fieldset>
-	<legend><?php echo JText::_('Search Parameters') ?></legend>
+	<!--<legend><?php echo JText::_('Search Parameters') ?></legend>-->
 
 	<div>
-		<label for="search_searchword">
-			<?php echo JText::_( 'Search Keyword' ); ?>:
-		</label>
+		<label for="search_searchword"><?php echo JText::_( 'Search Keyword' ); ?>:</label><br/>
 		<input type="text" name="searchword" id="search_searchword" size="30" maxlength="20" value="<?php echo $this->escape($this->searchword); ?>" class="inputbox" />
 		<button name="Search" onclick="this.form.submit()" class="button"><?php echo JText::_( 'Search' );?></button>
 	</div>
 	
-	<div>
+	<!--<div>
 		<?php echo $this->lists['searchphrase']; ?>
-	</div>
+	</div>-->
 	
 	<div>
-		<label for="ordering">
-			<?php echo JText::_( 'Ordering' );?>:
-		</label>
+		<label for="ordering"><?php echo JText::_( 'Ordering' );?>:</label><br/>
 		<?php echo $this->lists['ordering'];?>
 	</div>
 	
@@ -48,11 +44,10 @@ defined('_JEXEC') or die('Restricted access'); ?>
 
 </fieldset>
 
+<?php if($this->total > 0) : ?>
 <p>
 	<?php echo $this->result; ?>
 </p>
-
-<?php if($this->total > 0) : ?>
 <p>
 	<label for="limit">
 		<?php echo JText::_( 'Display Num' ); ?>

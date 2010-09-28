@@ -22,54 +22,12 @@ defined('_JEXEC') or die('Restricted access');
 </script>
 
 <form action="<?php echo JFilterOutput::ampReplace($this->action); ?>" method="post" name="adminForm">
+<ul>
+<?php foreach ($this->items as $item): ?>
+	<li><?php echo $item->link; ?></li>
+<?php endforeach; ?>
+</ul>
 
-<div class="filter">
-<?php
-	echo JText::_('Display Num') .'&nbsp;';
-	echo $this->pagination->getLimitBox();
-?>
-</div>
-
-<table width="100%" border="0" cellspacing="0" cellpadding="0" class="joomlatable">
-	<?php if ( $this->params->def( 'show_headings', 1 ) ) : ?>
-	<tr>
-		<th width="10" align="right">
-			<?php echo JText::_('Num'); ?>
-		</th>
-		<th align="left" width="90%">
-			<?php echo JHTML::_('grid.sort',  'Web Link', 'title', $this->lists['order_Dir'], $this->lists['order'] ); ?>
-		</th>
-		<?php if ( $this->params->get( 'show_link_hits' ) ) : ?>
-		<th width="30" align="right" nowrap="nowrap">
-			<?php echo JHTML::_('grid.sort',  'Hits', 'hits', $this->lists['order_Dir'], $this->lists['order'] ); ?>
-		</th>
-		<?php endif; ?>
-	</tr>
-	<?php endif; ?>
-	
-	<?php foreach ($this->items as $item) : ?>
-	<tr class="<?php if ($item->odd) { echo 'even'; } else { echo 'odd'; } ?>">
-		<td align="right">
-			<?php echo $this->pagination->getRowOffset( $item->count ); ?>
-		</td>
-		<td>
-			<?php if ( $item->image ) : ?>
-				&nbsp;&nbsp;<?php echo $item->image;?>&nbsp;&nbsp;
-			<?php endif; ?>
-			<?php echo $item->link; ?>
-			<?php if ( $this->params->get( 'show_link_description' ) ) : ?>
-				<br /><span class="description"><?php echo nl2br($this->escape($item->description)); ?></span>
-			<?php endif; ?>
-		</td>
-		<?php if ( $this->params->get( 'show_link_hits' ) ) : ?>
-		<td align="center">
-			<?php echo $item->hits; ?>
-		</td>
-		<?php endif; ?>
-	</tr>
-	<?php endforeach; ?>
-	
-</table>
 
 <div class="pagination">
 	<p class="results">
