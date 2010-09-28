@@ -1,5 +1,15 @@
 .moduletable {
-	margin: 1em 0;
+	margin: 1em 0 0;
+}
+.moduletable:first-child {
+	margin-top: 0;
+}
+
+.moduletable h3 {
+	color: #274067;
+	font-size: 19px;
+	font-weight: normal;
+	border-bottom: 1px solid #CBCBCB;
 }
 
 
@@ -23,9 +33,12 @@
 }
 
 .moduletable.menu li {
-	float: left;
-	padding: 0 10px;
+	display: inline-block;
+	padding: 0 22px;
 	margin: 0;
+}
+.moduletable.menu a:hover {
+	text-decoration: none;
 }
 /* @group drop menu */
 .moduletable.dropmenu li {
@@ -63,3 +76,82 @@
 	margin-left: 10px;
 }
 /* @end */
+
+/* @group sidebar modules */
+#sidebar .moduletable {
+	position: relative;
+}
+#sidebar .moduletable a {
+	color: white;
+}
+#sidebar .moduletable .title {
+	position: absolute;
+	top: 10px;
+	left: 15px;
+	
+	font-size: 22px;
+}
+#sidebar .moduletable .description {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	
+	width: 270px;
+	height: 38px;
+	padding: 0 5px;
+	line-height: 28px;
+}
+/* @end */
+
+/* @group menus */
+#top .moduletable.menu {
+	color: #274067;
+	font-size: 24px;
+	background: url(../images/arrow.png) no-repeat right;
+	padding-right: 15px;
+}
+#top .menu li {
+	padding: 0 0 0 22px;
+}
+#top .menu a {
+	color: #274067;
+}
+
+#menu .menu {
+	line-height: 20px;
+	font-size: 19px;
+}
+#menu .menu li {
+	padding: 0 22px;
+	line-height: 50px;
+	text-transform: lowercase;
+	background: url(../images/menu_div.png) no-repeat left center;
+}
+#menu .menu li:first-child {
+	padding-left: 0;
+	background: none;
+}
+#menu .menu a {
+	color: white;
+}
+#menu .menu li:hover a {
+	color: #7E7E7E;
+}
+
+/* @end */
+
+/* @group search */
+#mod_search_searchword {
+	margin: 0;
+	padding: 0 20px 0 5px;
+	background: url(../images/search.png) no-repeat;
+	border: none;
+	
+	width: 153px;
+	height: 20px;
+}
+/* @end */
+
+li.cats {
+	margin: 0;
+}

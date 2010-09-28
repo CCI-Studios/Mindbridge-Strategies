@@ -23,11 +23,13 @@ $testing = "true";
 	<link rel="stylesheet" type="text/css" href="/templates/<?php echo $this->template ?>/css/960/reset.css" />
 	<!--<link rel="stylesheet" type="text/css" href="/templates/<?php echo $this->template ?>/css/960/960.css" />-->
 	<link rel="stylesheet" type="text/css" href="/templates/<?php echo $this->template ?>/css/960/text.css" />
+	<link rel="stylesheet" type="text/css" href="/templates/<?php echo $this->template ?>/css/fonts.css" />
 	<link rel="stylesheet" type="text/css" href="/templates/<?php echo $this->template ?>/css/forms.css" />
 	<link rel="stylesheet" type="text/css" href="/templates/<?php echo $this->template ?>/css/layout.css" />
 	<link rel="stylesheet" type="text/css" href="/templates/<?php echo $this->template ?>/css/modules.css" />
 	<link rel="stylesheet" type="text/css" href="/templates/<?php echo $this->template ?>/css/style.css" />
 	<link rel="stylesheet" type="text/css" href="/templates/<?php echo $this->template ?>/css/editorStyles.css" />
+	<link rel="stylesheet" type="text/css" href="/templates/<?php echo $this->template ?>/css/slideshow.css" />
 	
 	<script type="text/javascript" src="/templates/<?php echo $this->template ?>/scripts/dropmenu.js"></script>
 <?php else: ?>
@@ -62,10 +64,12 @@ $testing = "true";
 	
 	
 	<div id="wrapper"><div>
+		<?php if ($this->countModules('header')): ?>
 		<div id="header"><div>
 			<jdoc:include type="modules" name="header" style="xhtml" />
 			<div class="clr"></div>
 		</div></div>
+		<?php endif; ?>
 		
 		<div id="title"><div>
 			<h1 class="heading"><span>

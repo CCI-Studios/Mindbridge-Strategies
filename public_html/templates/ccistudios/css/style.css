@@ -1,4 +1,25 @@
 /* @group misc */
+h1, h2, h3, h4, h5, h6 {
+	color: #7E7E7E;
+	font-weigth: bold;
+}
+h1 a, h2 a, h3 a,
+h4 a, h5 a, h6 a {
+	color: #7E7E7E;
+}
+
+h1 {
+	margin: 0;
+}
+
+
+a {
+	color: #274067;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
 
 /* @end */
 

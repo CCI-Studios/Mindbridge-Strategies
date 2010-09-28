@@ -4,39 +4,6 @@
  * general
  * used by Jommla core components
  */
- 
-div.joomla h1,
-div.joomla h2,
-div.joomla h3,
-div.joomla h4,
-div.joomla h5,
-div.joomla h6 {
-	line-height: 100%;
-	margin-bottom: 5px;
-}
-
-div.joomla h1 { font-size: 300%; }
-div.joomla h2 { font-size: 250%; }
-div.joomla h3 { font-size: 200%; }
-div.joomla h4 { font-size: 175%; }
-div.joomla h5 { font-size: 150%; }
-div.joomla h6 { font-size: 125%; }
-
-div.joomla h1 {
-	letter-spacing: -2px;
-}
-
-div.joomla h2,
-div.joomla h3,
-div.joomla h4,
-div.joomla h5 {
-	letter-spacing: -1px;
-}
-
-div.joomla p {	margin: 10px 0px 15px 0px; }
-
-div.joomla h1.pagetitle {
-}
 
 div.joomla div.description {
 	margin: 10px 0px 10px 0px;
@@ -55,30 +22,6 @@ div.joomla div.description img.right {
 
 div.joomla div.filter {
 	margin: 10px 0px 10px 0px;
-}
-
-div.joomla th {
-	padding: 5px 5px 5px 5px;
-	background: #ebebeb;
-	border-bottom: 1px solid #b4b4b4;
-	font-weight : bold;
-}
-
-div.joomla tr.even td {
-	padding: 5px 5px 5px 5px;
-	background: #f0f0f0;
-	border-bottom: 1px solid #dcdcdc;
-}
-
-div.joomla tr.odd td {
-	padding: 5px 5px 5px 5px;
-	background: #fafafa;
-	border-bottom: 1px solid #dcdcdc;
-}
- 
-div.joomla span.number {
-	color: #969696;
-	font-style: italic;
 }
 
 /* floats */
