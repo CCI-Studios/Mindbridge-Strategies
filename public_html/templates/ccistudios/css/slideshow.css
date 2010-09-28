@@ -20,7 +20,7 @@
 	padding: 0 10px;
 }
 
-.slide_info {
+#header .moduletable.slide_info {
 	background: url(../images/slideshow.png) no-repeat;
 	width: 230px;
 	height: 205px;

@@ -21,6 +21,12 @@ a:hover {
 	text-decoration: underline;
 }
 
+.readmore {
+	background: url(../images/arrow.png) no-repeat right;
+	padding-right: 15px;
+	color: #9B9B9B;
+}
+
 /* @end */
 
 /* @group ie6 redirect */
