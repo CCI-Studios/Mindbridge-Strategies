@@ -2,6 +2,7 @@
 h1, h2, h3, h4, h5, h6 {
 	color: #7E7E7E;
 	font-weigth: bold;
+	margin: 0 0 0.6em;
 }
 h1 a, h2 a, h3 a,
 h4 a, h5 a, h6 a {
