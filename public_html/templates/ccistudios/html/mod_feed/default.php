@@ -40,9 +40,7 @@
 							$text .= '...';
 						}
 					} ?>
-					<div style="text-align: <?php echo $params->get('rssrtl', 0) ? 'right': 'left'; ?> ! important" class="newsfeed_item<?php echo $params->get( 'moduleclass_sfx'); ?>"  >
-						<?php echo $text; ?>
-					</div>
+					<p><?php echo $text; ?></p>
 				<?php endif; ?>
 			</div>
 		<?php endfor; ?>
