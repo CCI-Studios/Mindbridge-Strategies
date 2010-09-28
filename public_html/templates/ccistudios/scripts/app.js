@@ -1,4 +1,3 @@
 /*
- * @depends dropbox.js
- *
+ * @depends dropmenu.js
  */
