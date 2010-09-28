@@ -9,30 +9,20 @@ var Slideshow = new Class({
 	delay: 3000,
 
 	initialize: function (el) {
-		var toggle;
+		var toggle, i;
 		if (!el || el === undefined) {
 			return;
 		}
 		
-		this.base = parseInt(0+el.getStyle('z-index'), 10) + 1;
+		this.base = parseInt(0 + el.getStyle('z-index'), 10) + 1;
 		this.slides = el.getElements('.item');
 		this.effects = [];
 		
-		for (i = 0; i < this.slides.length; i++) {
+		for (i = 0; i < this.slides.length; i += 1) {
 			toggle = new Fx.Styles(this.slides[i], {
 				duration: this.duration,
 				transition: Fx.Transitions.linear,
-				onComplete: function () {
-					var next = this.active+1;
-					if (next === this.slides.length)
-						next = 0;
-					
-					this.slides[this.active].setStyle('z-index', this.base);
-					this.slides[next].setStyles({
-						'z-index': this.base+1,
-						'opacity': 0
-					});
-				}.bind(this)
+				onComplete: this.complete.bind(this)
 			});
 			this.effects.push(toggle);
 			
@@ -43,7 +33,7 @@ var Slideshow = new Class({
 				});
 			} else if (i === 1) {
 				this.slides[i].setStyles({
-					'z-index':	this.base+1,
+					'z-index':	this.base + 1,
 					opacity:	0
 				});
 			} else {
@@ -60,18 +50,30 @@ var Slideshow = new Class({
 			opacity: 0
 		});
 		
-		this.active++;
-		if (this.active === this.slides.length)
+		this.active += 1;
+		if (this.active === this.slides.length) {
 			this.active = 0;
+		}
 			
 		this.effects[this.active].start({
 			opacity: 1
 		});
 		
-		this.next.delay(this.delay+this.duration, this);
+		this.next.delay(this.delay + this.duration, this);
 	},
 	
-	complete: function () {},
+	complete: function () {
+		var next = this.active + 1;
+		if (next === this.slides.length) {
+			next = 0;
+		}
+		
+		this.slides[this.active].setStyle('z-index', this.base);
+		this.slides[next].setStyles({
+			'z-index': this.base + 1,
+			'opacity': 0
+		});
+	},
 	
 	start: function () {
 		this.next.delay(this.delay, this);

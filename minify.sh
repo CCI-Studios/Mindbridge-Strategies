@@ -1,1 +1,2 @@
-juicer merge public_html/templates/ccistudios/css/template.css public_html/templates/ccistudios/css/template.min.css 
+juicer merge --force public_html/templates/ccistudios/css/template.css
+juicer merge --force -i public_html/templates/ccistudios/scripts/app.js

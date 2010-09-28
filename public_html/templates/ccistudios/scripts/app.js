@@ -1,4 +1,4 @@
 /*
- * @depends dropbox.js
- *
+ * @depends dropmenu.js
+ * @depends slideshow.js
  */
