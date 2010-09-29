@@ -53,3 +53,6 @@
 }
 
 .slideshow .link.active { background: url(../images/white_dot.png) no-repeat; }
+.slideshow .description a {
+	color: white;
+}
