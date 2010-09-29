@@ -26,6 +26,10 @@ $testing = true;
 	<link rel="stylesheet" type="text/css" href="/templates/<?php echo $this->template ?>/css/template.min.css" />
 	<script type="text/javascript" src="/templates/<?php echo $this->template ?>/scripts/app.min.js"></script>
 <?php endif; ?>
+	<!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="/templates/<?php echo $this->template ?>/css/ie.css" />
+	<![endif]-->
+
 </head>
 
 <body class="<?php echo $menu; ?>">
@@ -65,7 +69,7 @@ $testing = true;
 		<div id="title"><div>
 			<h1 class="heading"><span>
 				<?php echo JFactory::getApplication()->getPageTitle(); ?>
-			</h1></span>
+			</span></h1>
 		</div></div>
 		
 		<div id="body" <?php if (!$this->countModules('sidebar')) { echo 'class="wide"'; } ?>>
@@ -103,7 +107,7 @@ $testing = true;
 	
 	<div id="footer_spacer"></div>
 	<div id="footer"><div>
-		<p class="left">Site by <a href="" target="">CCI Studios</a></p>
+		<p class="left">Site by <a href="" target="_blank">CCI Studios</a></p>
 		<p class="right">Copyright &copy; <?=date('Y');?> Mindbridge Strategies</p>
 	</div></div>
 </div>

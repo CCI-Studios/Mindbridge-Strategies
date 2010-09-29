@@ -19,19 +19,23 @@ defined('_JEXEC') or die('Restricted access');
 				$_a = $item->extra_fields[0]->value;
 				$_t = $item->extra_fields[1]->value;
 			?>
-			<a href="<?php echo $_a; ?>" target="<?php echo $_t; ?>">
-				<div class="title">
-					<?php echo $item->title; ?>
-				</div>
+			<div class="title">
+				<?php if ($_a) echo "<a href=\"$_a\" target=\"$_t\">" ?>
+				<?php echo $item->title; ?>
+				<?php if ($_a) echo "</a>"; ?>
+			</div>
 				
-				<div class="image">
-					<img src="<?php echo $item->image; ?>" alt="<?php echo $item->title; ?>" />
-				</div>
+			<div class="image">
+				<?php if ($_a) echo "<a href=\"$_a\" target=\"$_t\">" ?>
+				<img src="<?php echo $item->image; ?>" alt="<?php echo $item->title; ?>" />
+				<?php if ($_a) echo "</a>"; ?>
+			</div>
 				
-				<div class="description">
-					<?php echo $item->introtext; ?>
-				</div>
-			</a>
+			<div class="description">
+				<?php if ($_a) echo "<a href=\"$_a\" target=\"$_t\">" ?>
+				<?php echo $item->introtext; ?>
+				<?php if ($_a) echo "</a>"; ?>
+			</div>
 	    </div>
     <?php endforeach; ?>
 	<?php endif; ?>	

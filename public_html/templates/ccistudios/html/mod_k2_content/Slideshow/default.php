@@ -28,11 +28,6 @@ defined('_JEXEC') or die('Restricted access');
 					<?php if ($_a) echo " <a href=\"$_a\" target=\"$_t\">Read more...</a>" ?>
 				</div>
 	    </div>
-	    <?php
-	    	if ($_a) {
-	    		echo "</a>";
-	    	}
-	    ?>
-    <?php endforeach; ?>
+	<?php endforeach; ?>
 	<?php endif; ?>	
 </div>

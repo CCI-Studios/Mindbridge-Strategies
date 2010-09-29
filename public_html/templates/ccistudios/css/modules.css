@@ -75,6 +75,11 @@
 #precontent > .moduletable.right {
 	margin-left: 10px;
 }
+#postcontent .moduletable.wide {
+	width: 100%;
+	margin-right: 0;
+	margin-left: 0;
+}
 /* @end */
 
 /* @group sidebar modules */

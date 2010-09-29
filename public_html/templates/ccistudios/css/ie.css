@@ -1,0 +1,20 @@
+#mod_search_searchword {
+	padding-top: 3px;
+}
+
+.moduletable.menu li {
+	zoom:1; 
+	*display: inline;
+}
+
+#sidebar .moduletable a {
+	display: block;
+}
+
+#body {
+	left: 0;
+}
+
+#postcontent .clr + .right {
+	margin-top: 0;
+}
