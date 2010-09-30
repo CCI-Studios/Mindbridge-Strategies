@@ -22,6 +22,7 @@ $testing = true;
 	<link rel="stylesheet" type="text/css" href="/templates/<?php echo $this->template ?>/css/template.css" />
 	<script type="text/javascript" src="/templates/<?php echo $this->template ?>/scripts/dropmenu.js"></script>
 	<script type="text/javascript" src="/templates/<?php echo $this->template ?>/scripts/slideshow.js"></script>
+	<script type="text/javascript" src="/templates/<?php echo $this->template ?>/scripts/rollover.js"></script>
 <?php else: ?>
 	<link rel="stylesheet" type="text/css" href="/templates/<?php echo $this->template ?>/css/template.min.css" />
 	<script type="text/javascript" src="/templates/<?php echo $this->template ?>/scripts/app.min.js"></script>

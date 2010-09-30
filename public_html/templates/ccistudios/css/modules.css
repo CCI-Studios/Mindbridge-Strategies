@@ -89,6 +89,9 @@
 #sidebar .moduletable a {
 	color: white;
 }
+#sidebar .moduletable a:hover {
+	text-decoration: none;
+}
 #sidebar .moduletable .title {
 	position: absolute;
 	top: 10px;
