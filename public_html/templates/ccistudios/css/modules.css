@@ -160,6 +160,10 @@
 	padding: 0;
 	border: none;
 	float: left;
+	
+	width: 156px;
+	height: 14px;
+	display: inline-block;
 }
 .moduletable .search .button {
 	float: left;
