@@ -146,15 +146,23 @@
 /* @end */
 
 /* @group search */
+.moduletable .search {
+	background: url(../images/search.png) no-repeat;
+	width: 178px;
+	height: 20px;
+	padding: 4px 0 2px 5px;
+}
 #mod_search_searchword {
 	margin: 0;
-	padding: 0 20px 0 5px;
-	background: url(../images/search.png) no-repeat;
+	padding: 0;
 	border: none;
-	
-	width: 153px;
-	height: 20px;
+	float: left;
 }
+.moduletable .search .button {
+	float: left;
+}
+
+
 /* @end */
 
 li.cats {

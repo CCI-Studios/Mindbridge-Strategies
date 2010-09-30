@@ -1,5 +1,6 @@
+.moduletable .search { padding-top: 3px; }
 #mod_search_searchword {
-	padding-top: 3px;
+	border: 0;
 }
 
 .moduletable.menu li {

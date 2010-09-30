@@ -45,7 +45,7 @@ html,body {
 	padding: 5px 0 0;
 }
 
-body.home #content { display: none; }
+body.page-home #content { display: none; }
 
 #postcontent .moduletable:first-child + .moduletable {
 	margin-top: 0;

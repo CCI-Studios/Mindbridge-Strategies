@@ -33,7 +33,7 @@ $testing = true;
 	<link rel="shortcut icon" href="/templates/<?php echo $this->template ?>/images/favicon.ico" type="image/ico" />
 </head>
 
-<body class="<?php echo $menu; ?>">
+<body class="<?php echo 'page-'.$menu; ?>">
 <?php if (!$testing): ?>
 <script type="text/javascript">
   var _gaq = _gaq || [];
