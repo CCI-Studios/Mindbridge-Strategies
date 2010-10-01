@@ -153,7 +153,7 @@
 	background: url(../images/search.png) no-repeat;
 	width: 178px;
 	height: 20px;
-	padding: 4px 0 2px 5px;
+	padding: 3px 0 2px 5px;
 }
 #mod_search_searchword {
 	margin: 0;
@@ -164,6 +164,7 @@
 	width: 156px;
 	height: 14px;
 	display: inline-block;
+	font-family: "TW_cen";
 }
 .moduletable .search .button {
 	float: left;
