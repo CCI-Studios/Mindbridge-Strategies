@@ -1,0 +1,53 @@
+#navbar {
+	display: none;
+}
+
+h1 {}
+
+.post-title {
+	background: url(../images/heading.png) no-repeat left top;
+	padding: 0 0 0 10px;
+	
+	font-size: 14px;
+	font-weight: normal;
+	color: #274067;
+	line-height: 42px;
+}
+.post-title a {
+	display: block;
+	height: 42px;
+	
+	background: url(../images/heading.png) no-repeat right bottom;
+	padding: 0 10px 0 0;
+}
+
+.date-header {
+	float: right;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 42px;
+	padding-right: 10px;
+}
+
+.post-footer {
+	margin-bottom: 1em;
+}
+
+
+#sidebar h2 {
+	color: #274067;
+	font-size: 19px;
+	font-weight: normal;
+	border-bottom: 1px solid #CBCBCB;
+	font-size: 19px;
+}
+
+#menu p {
+	line-height: 50px;
+	font-size: 19px;
+	color: white;
+	text-transform: lowercase;
+}
+#menu p a {
+	color:  white;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<b:include data="blog" name="all-head-content" />
+	<title><data:blog.pageTitle/></title>
+	<b:skin><![CDATA[/*
+	Name: Mindbridge
+	Data: Oct 4, 2010
+	Updated by: CCI Studios
+	*/
+	]]></b:skin>
+	<link rel="stylesheet" href="http://mindbridge.ccistaging.com/templates/ccistudios/css/template.min.css" />
+	<link rel="stylesheet" href="http://mindbridge.ccistaging.com/templates/ccistudios/css/blog.css" />
+</head>
+
+
+<body>
+<div id="outer">
+	<div id="top"><div>
+		<div class="left">
+			<a expr:href='data:blog.homepageUrl'>
+				<img src="http://mindbridge.ccistaging.com/images/stories/logo.png" width="253" height="44" alt="Home" />
+			</a>
+		</div>
+	</div></div>
+	<div id="menu"><div>
+		<p>&lt;&lt; Return to <a href="http://www.mindbridgestrategies.com">Mindbridge Strategies</a></p>
+	</div></div>
+	
+	<div id="wrapper"><div>
+		<!--
+		<b:section class='crosscol' id='crosscol' />
+		-->		
+		<b:if cond='data:blog.url == data:blog.homepageUrl'>
+			<div id="precontent">
+				<b:section class="header" id="header" maxwidgets='1' showaddelement='no'>
+					<b:widget id='Header1' locked='true' title='Jon&apos;s Blog (Header)' type='Header' />
+				</b:section>
+			</div>
+		</b:if>
+		
+		<div id="body">
+			<div id="content">
+				<b:section class='main' id='main' showaddelement='no'>
+					<b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' />
+				</b:section>	
+			</div>
+		</div>
+		
+		<div id="sidebar">
+			<b:section class='sidebar' id='sidebar' preferred='yes'>
+				<b:widget id='BlogArchive2' locked='false' title='Blog Archive' type='BlogArchive' />
+			</b:section>
+		</div>
+	
+		<div class="clr"></div>
+	</div></div>
+	
+	<div id="footer_spacer"></div>
+	<div id="footer"><div>
+		<p class="left">Site by <a href="" target="_blank">CCI Studios</a></p>
+		<p class="right">Copyright &#169; 2010 Mindbridge Strategies</p>
+		
+		<!--
+		<b:section class='footer' id='footer' />
+		-->
+	</div></div>
+</div>
+</body>
+</html>
