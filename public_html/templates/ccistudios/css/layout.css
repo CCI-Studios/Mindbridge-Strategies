@@ -37,12 +37,12 @@ html,body {
 }
 
 #header { padding: 0 0 18px 0; }
-#title { padding: 0 0 5px; }
+#title { padding: 0 0 18px; }
 #body {
 	float: left;
 	width: 652px;
 	margin-right: 20px;
-	padding: 5px 0 0;
+	padding: 0;
 }
 
 body.page-home #content { display: none; }
@@ -54,7 +54,7 @@ body.page-home #content { display: none; }
 #sidebar {
 	width: 280px;
 	float: left;
-	padding: 5px 0 0;
+	padding: 0;
 }
 
 

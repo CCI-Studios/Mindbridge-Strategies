@@ -4,7 +4,7 @@
 	background: url(../images/heading.png) no-repeat left top;
 	padding: 0 0 0 10px;
 	
-	font-size: 14px;
+	font-size: 17px;
 	font-weight: normal;
 	color: #274067;
 	line-height: 42px;
@@ -15,4 +15,8 @@
 	
 	background: url(../images/heading.png) no-repeat right bottom;
 	padding: 0 10px 0 0;
+}
+
+.inner .heading {
+	font-size: 17x;
 }
